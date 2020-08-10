@@ -1,0 +1,9 @@
+language: bash
+
+sudo: false
+
+services:
+  - mysql
+
+script:
+  - sh test.sh
