@@ -1,9 +1,15 @@
-language: bash
+language: shell
 
-sudo: false
+dist: xenial
+
+sudo: true
 
 services:
   - mysql
 
+before_script:
+  - mysql -e 'SELECT version();' &>/dev/null
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS leetcode_mysql;'
+
 script:
-  - sh test.sh
+  - bash test.sh $(which mysql) leetcode_mysql
