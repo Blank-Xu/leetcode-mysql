@@ -6,7 +6,6 @@ services:
   - mysql
 
 before_script:
-  - mysql -e "SELECT version();" &>/dev/null
   - mysql -e 'CREATE DATABASE IF NOT EXISTS leetcode_mysql;'
 
 script:
