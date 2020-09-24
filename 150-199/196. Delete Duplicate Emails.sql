@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/delete-duplicate-emails/
+# https://leetcode.com/problems/delete-duplicate-emails/
 
 # Tables: Person
 # +----+------------------+
@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `Person`;
 
 CREATE TABLE `Person`
 (
-  `Id`    int AUTO_INCREMENT PRIMARY KEY,
-  `Email` varchar(64)
+    `Id`    int AUTO_INCREMENT PRIMARY KEY,
+    `Email` varchar(64)
 );
 
 INSERT INTO `Person` (`Email`)
@@ -40,7 +40,7 @@ VALUES ('john@example.com'),
 # ---------------scripts----------------
 # --------------------------------------
 DELETE P1
-FROM `Person` P1,
-     `Person` P2
-WHERE P1.Email = P2.Email
+FROM `Person` AS P1,
+     `Person` AS P2
+WHERE P1.`Email` = P2.`Email`
   AND P1.`Id` > P2.`Id`;

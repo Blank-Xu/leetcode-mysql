@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/swap-salary/
+# https://leetcode.com/problems/swap-salary/
 
 # table salary:
 # | id | name | sex | salary |
@@ -21,24 +21,25 @@
 # --------------------------------------
 DROP TABLE IF EXISTS `salary`;
 
-CREATE TABLE `salary`(
-  `id` int AUTO_INCREMENT PRIMARY KEY ,
-  `name` varchar(2),
-  `sex` varchar(2),
-  `salary` float
+CREATE TABLE `salary`
+(
+    `id`     int AUTO_INCREMENT PRIMARY KEY,
+    `name`   varchar(2),
+    `sex`    varchar(2),
+    `salary` float
 );
 
 INSERT INTO `salary` (`name`, `sex`, `salary`)
-VALUES ('A','m',2500),
-       ('B','f',1500),
-       ('C','m',5500),
-       ('D','f',500);
+VALUES ('A', 'm', 2500),
+       ('B', 'f', 1500),
+       ('C', 'm', 5500),
+       ('D', 'f', 500);
 
 # SELECT * FROM `salary`;
-
 
 
 # --------------------------------------
 # ---------------scripts----------------
 # --------------------------------------
-UPDATE `salary` SET `sex` = IF (`sex` = 'm','f','m');
+UPDATE `salary`
+SET `sex` = IF(`sex` = 'm', 'f', 'm');

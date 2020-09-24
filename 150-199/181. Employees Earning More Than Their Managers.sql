@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/employees-earning-more-than-their-managers/
+# https://leetcode.com/problems/employees-earning-more-than-their-managers/
 
 # +----+-------+--------+-----------+
 # | Id | Name  | Salary | ManagerId |
@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `Employee`;
 
 CREATE TABLE `Employee`
 (
-  `Id`        int PRIMARY KEY AUTO_INCREMENT,
-  `Name`      varchar(100),
-  `Salary`    float,
-  `ManagerId` int
+    `Id`        int PRIMARY KEY AUTO_INCREMENT,
+    `Name`      varchar(100),
+    `Salary`    float,
+    `ManagerId` int
 );
 
 INSERT INTO `Employee` (`Name`, `Salary`, `ManagerId`)

@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/not-boring-movies/
+# https://leetcode.com/problems/not-boring-movies/
 
 # table cinema:
 #
@@ -27,10 +27,10 @@ DROP TABLE IF EXISTS `cinema`;
 
 CREATE TABLE `cinema`
 (
-  `id`          int AUTO_INCREMENT PRIMARY KEY,
-  `movie`       varchar(64),
-  `description` varchar(255),
-  `rating`      float
+    `id`          int AUTO_INCREMENT PRIMARY KEY,
+    `movie`       varchar(64),
+    `description` varchar(255),
+    `rating`      float
 );
 
 INSERT INTO `cinema` (`movie`, `description`, `rating`)
@@ -47,6 +47,6 @@ VALUES ('War', 'great 3D', 8.9),
 # --------------------------------------
 SELECT *
 FROM `cinema`
-WHERE `description` != 'boring'
-  AND `id` & 1
+WHERE `id` & 1
+  AND `description` != 'boring'
 ORDER BY `rating` DESC;

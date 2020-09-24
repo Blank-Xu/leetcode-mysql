@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/combine-two-tables/
+# https://leetcode.com/problems/combine-two-tables/
 
 # Table: Person
 #
@@ -38,7 +38,7 @@ CREATE TABLE `Person`
 
 CREATE TABLE `Address`
 (
-    `AddressId` int,
+    `AddressId` int PRIMARY KEY,
     `PersonId`  int,
     `City`      varchar(100),
     `State`     varchar(100)

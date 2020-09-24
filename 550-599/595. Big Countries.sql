@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/big-countries/
+# https://leetcode.com/problems/big-countries/
 
 # --------------data-------------------
 # +-----------------+------------+------------+--------------+---------------+
@@ -27,11 +27,11 @@ DROP TABLE IF EXISTS `World`;
 
 CREATE TABLE `World`
 (
-  `name`       varchar(100),
-  `continent`  varchar(100),
-  `area`       varchar(100),
-  `population` int,
-  `gdp`        int
+    `name`       varchar(100),
+    `continent`  varchar(100),
+    `area`       varchar(100),
+    `population` int,
+    `gdp`        int
 );
 
 INSERT INTO `World`
@@ -46,10 +46,6 @@ VALUES ('Afghanistan', 'Asia', 652230, 25500100, 20343000),
 # --------------------------------------
 # ---------------scripts----------------
 # --------------------------------------
-SELECT `name`, `population`,`area`
+SELECT `name`, `population`, `area`
 FROM `World`
-WHERE `area` > 3000000
-UNION
-SELECT `name`, `population`,`area`
-FROM `World`
-WHERE `population` > 25000000;
+WHERE `area` > 3000000 OR `population` > 25000000;

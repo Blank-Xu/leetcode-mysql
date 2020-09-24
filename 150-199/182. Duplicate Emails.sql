@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/duplicate-emails/
+# https://leetcode.com/problems/duplicate-emails/
 
 # --------------data-------------------
 # +----+---------+
@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `Person`;
 
 CREATE TABLE `Person`
 (
-  `Id`    int PRIMARY KEY AUTO_INCREMENT,
-  `Email` varchar(100) NOT NULL DEFAULT ''
+    `Id`    int PRIMARY KEY AUTO_INCREMENT,
+    `Email` varchar(100) DEFAULT '' NOT NULL
 );
 
 INSERT INTO `Person` (`Email`)

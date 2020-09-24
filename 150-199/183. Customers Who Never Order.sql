@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/customers-who-never-order/
+# https://leetcode.com/problems/customers-who-never-order/
 
 # Table: Customers.
 #
@@ -36,8 +36,8 @@ DROP TABLE IF EXISTS `Orders`;
 
 CREATE TABLE `Customers`
 (
-  `Id`   int AUTO_INCREMENT PRIMARY KEY,
-  `Name` varchar(64)
+    `Id`   int AUTO_INCREMENT PRIMARY KEY,
+    `Name` varchar(64)
 );
 
 INSERT INTO `Customers`(`Name`)
@@ -48,8 +48,8 @@ VALUES ('Joe'),
 
 CREATE TABLE `Orders`
 (
-  `Id`         int AUTO_INCREMENT PRIMARY KEY,
-  `CustomerId` int
+    `Id`         int AUTO_INCREMENT PRIMARY KEY,
+    `CustomerId` int
 );
 
 INSERT INTO `Orders`(`CustomerId`)
@@ -60,7 +60,7 @@ VALUES (3),
 # --------------------------------------
 # ---------------scripts----------------
 # --------------------------------------
-SELECT C.`Name` Customers
-FROM `Customers` C
-         LEFT JOIN `Orders` O ON C.`Id` = O.`CustomerId`
+SELECT C.`Name` AS `Customers`
+FROM `Customers` AS C
+         LEFT JOIN `Orders` AS O ON C.`Id` = O.`CustomerId`
 WHERE O.`Id` IS NULL;

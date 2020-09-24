@@ -1,4 +1,4 @@
-# https://leetcode-cn.com/problems/second-highest-salary/
+# https://leetcode.com/problems/second-highest-salary/
 
 # +----+--------+
 # | Id | Salary |
@@ -22,8 +22,8 @@ DROP TABLE IF EXISTS `Employee`;
 
 CREATE TABLE `Employee`
 (
-  `Id`     int PRIMARY KEY AUTO_INCREMENT,
-  `Salary` float
+    `Id`     int PRIMARY KEY AUTO_INCREMENT,
+    `Salary` float
 );
 
 INSERT INTO `Employee` (`Salary`)
